@@ -18,6 +18,8 @@ COPY package*.json /app
 RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
 # RUN npm config set registry https://registry.npm.taobao.org/
 
+ENV NODE_EXTRA_CA_CERTS=/app/cert/certificate.crt
+
 # npm 安装依赖
 RUN npm install
 

@@ -1,0 +1,31 @@
+{
+  "containers": [
+    {
+      "name": "test-weixin-js",
+      "containerId": "2e8160578d8847b033cc4e421e7c80a10724f48af2ae1dae98e7b557f3b6a936",
+      "domain": "",
+      "ip": ""
+    }
+  ],
+  "config": {
+    "test-weixin-js": {
+      "containerPort": 80,
+      "dockerfilePath": "Dockerfile",
+      "buildDir": "",
+      "minNum": 0,
+      "maxNum": 10,
+      "cpu": 1,
+      "mem": 2,
+      "policyType": "cpu",
+      "policyThreshold": 80,
+      "envParams": {},
+      "customLogs": "stdout",
+      "initialDelaySeconds": 2,
+      "dataBaseName": "nodejs_demo",
+      "executeSQLs": [
+        "CREATE DATABASE IF NOT EXISTS nodejs_demo;",
+        "USE nodejs_demo;"
+      ]
+    }
+  }
+}
